@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Welcome to Foundation</title>
+
+    <!-- Included CSS Files (Compressed) -->
+    <link rel="stylesheet" href="stylesheets/foundation.min.css">
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <style>
+        .custom.nav-bar {
+            background-color: #2ba6cb;
+        }
+    </style>
+    <script src="javascripts/modernizr.foundation.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="tweleve columns">
+            @Yeti.Ipsum.orbit("featured",600,300, 3)
+        </div>
+    </div>
+    <div class="row">
+        <div class="twelve columns">
+            @Yeti.Ipsum.breadcrumbs()
+        </div>
+    </div>
+    <div class="row">
+        <div class="twelve columns">
+            @Yeti.Ipsum.navbar(5,1,{"class": "right"})
+        </div>
+    </div>
+    <div class="row">
+        <div class="twelve columns">
+            @Yeti.Ipsum.navbar(5,1,{"class": "custom"})
+        </div>
+    </div>
+    <div class="row">
+        <div class="twelve columns">
+            @Yeti.Ipsum.pills()
+        </div>
+    </div>
+    <div class="row">
+        <div class="twelve columns">
+            @Yeti.Ipsum.h1()
+        </div>
+    </div>
+    <div class="row">
+        <div class="four columns">
+            <!-- alternative Yeti.Ipsum.navbar(4,2,{"class": "vertical"}) -->
+            @Yeti.Ipsum.vnavbar()
+        </div>
+        <div class="eight columns">
+            @Yeti.Ipsum.h1().p().h2().p()
+        </div>
+    </div>
+    <div class="row">
+        <div class="twelve columns">
+            @Yeti.Ipsum.inlineList()
+        </div>
+    </div>
+    <!-- Included JS Files (Compressed) -->
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/foundation.min.js"></script>
+
+    <!-- Initialize JS Plugins -->
+    <script src="javascripts/app.js"></script>
+    <script src="../../plugin-src/javascripts/jquery-replacetext-master/jquery.ba-replacetext.js"></script>
+    <script src="../../plugin-src/javascripts/loremjs-master/lorem.js"></script>
+    <script src="../../plugin-src/extensions/yeti.ipsumExtension.js"></script>
+    <script src="../../plugin-src/jquery.inlineIpsum.js"></script>
+    <script>
+        $('body *').inlineIpsum(
+            {
+                extension: yetiIpsum,
+                locator: "Yeti"
+            }
+            );
+    </script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#featured").orbit();
+        });
+</script>
+</body>
+</html>
