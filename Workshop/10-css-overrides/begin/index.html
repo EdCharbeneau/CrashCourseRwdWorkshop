@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+    <div class="contain-to-grid">
+        <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="#">My Site</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li class="show-for-large-up"><a href="#media">Media</a></li>
+                    <li class="hide-for-large-up"><a href="./media.html">Media</a></li>
+                </ul>
+                <ul class="right">
+                    <li class="has-form">
+                        <a href="#" class="button">Action</a>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+    <section id="hero">
+        <div class="row">
+            <div class="small-12 medium-6 columns">
+                <!-- Title and Slug -->
+                @Html.Ipsum.h1().h4(8)
+                <p class="text-center"><a href="#" class="button">Primary Action</a></p>
+            </div>
+            <div class="small-12 medium-6 columns">
+                <!-- Product image -->
+                @Html.Ipsum.image(460, 300)
+            </div>
+        </div>
+    </section>
+    <section id="features">
+        <div class="row">
+            <div class="small-6 medium-3 columns">
+                <p>@Html.Ipsum.image(300,300)</p>
+            </div>
+            <div class="small-6 medium-3 columns">
+                <p>@Html.Ipsum.image(300,300)</p>
+            </div>
+            <div class="small-6 medium-3 columns">
+                <p>@Html.Ipsum.image(300,300)</p>
+            </div>
+            <div class="small-6 medium-3 columns">
+                <p>@Html.Ipsum.image(300,300)</p>
+            </div>
+        </div>
+    </section>
+    <section id="benefits">
+        <div class="row">
+            <div class="small-12 medium-6 large-6 large-push-3 columns">
+                <!-- First -->
+                @Html.Ipsum.h3().p().h4().p().h4().p()
+            </div>
+            <div class="small-12 medium-6 large-3 large-push-3 columns">
+                <!-- Second -->
+                @Html.Ipsum.h3().p()
+                <p class="text-center">
+                    <a href="#" class="button">Primary Action</a>
+                </p>
+            </div>
+            <div class="small-12 medium-12 large-3 large-pull-9 columns">
+                <!-- Third -->
+                <h4>Twitter Feed</h4>
+                @Html.Ipsum.ul(4,10,true)
+            </div>
+        </div>
+    </section>
+    <section id="media">
+        <div data-interchange="[https://gist.githubusercontent.com/EdCharbeneau/5dc3f64f14511dd41f21/raw/481256a3dc469b6d6a86a6425e74348af8f8f22a/_media.html, (large)]">
+            <p class="text-center"><a class="button secondary" href="media.html">View Media</a></p>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="small-12 columns">
+                <h4>Links</h4>
+                @Html.Ipsum.ul(14, 2, true, {class: "small-block-grid-2 medium-block-grid-3 large-block-grid-4"})
+            </div>
+        </div>
+    </footer>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/jquery.inlineIpsum.min.js"></script>
+    <script>
+        $(document).foundation();
+        $('body *').inlineIpsum();
+    </script>
+</body>
+</html>
